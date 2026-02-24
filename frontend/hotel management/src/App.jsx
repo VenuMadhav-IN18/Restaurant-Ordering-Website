@@ -3,20 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
-import Register from './pages/Register.jsx';
+import Register from './pages/register';
+import Login from './pages/login';
+import Home from './pages/Home';
 
 function App() {
  
 
   return (
     <>
-      <h1>Hotel Management System</h1>
-      <p>Welcome to the Hotel Management System. Please register or login to continue.</p>
       
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Register />} />
+          <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           
         </Routes>
       </BrowserRouter>
